@@ -38,9 +38,6 @@ const apiPort = 3000
  //app.use(bodyParser.json()) is also middleware that parses the body of incoming requests
 //that have Content-Type of application/json. It allows access the data sent in the request body via the req.body property.
 
-var port = normalizePort(process.env.PORT || '3000');
-app.set('port', port);
-
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(cors())
 app.use(bodyParser.json())
@@ -73,5 +70,6 @@ app.get('/', (req, res) => {
 
 app.use('/api', NotesRouter)
 
-app.listen(port, () => console.log(`Server running on port ${apiPort}`))//()=>function has no arguments
+const PORT = process.env.PORT || 3000;
+app.listen(PORT,() => console.log("Server running"))
 
