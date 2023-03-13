@@ -71,5 +71,5 @@ app.get('/', (req, res) => {
 
 app.use('/api', NotesRouter)
 
-app.listen(`0.0.0.0:$PORT`, () => console.log(`Server running on port ${apiPort}`))//()=>function has no arguments
+app.listen(0.0.0.0:$PORT, () => console.log(`Server running on port ${apiPort}`))//()=>function has no arguments
 
