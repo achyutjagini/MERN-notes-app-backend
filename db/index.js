@@ -18,10 +18,12 @@
 //module.exports = db is exporting the connection object,
 //so it can be used in other parts of the application.
 
+//old-mongodb://127.0.0.1:27017/notes
+
 const mongoose = require('mongoose')
 
 mongoose
-    .connect('mongodb://127.0.0.1:27017/notes', { useNewUrlParser: true },{ useUnifiedTopology: true })
+    .connect('mongodb+srv://achyutj:abcd@notes.n2evlhc.mongodb.net/?retryWrites=true&w=majority', { useNewUrlParser: true },{ useUnifiedTopology: true })
     .catch(e => {
         console.error('Connection error', e.message)
     })
